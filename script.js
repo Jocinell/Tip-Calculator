@@ -17,11 +17,12 @@ function  calculateTip() {
 let total = parseFloat((bill + totalTip).toFixed(2));
 
 let tipPerPerson = (totalTip / noOfPeople).toFixed(2);
+let total_per_person = (total / noOfPeople).toFixed(2);
 
 document.getElementById("tip-amount").
 textContent = `\$ ${totalTip}`;
 document.getElementById("total-amount").
-textContent = `\$ $ {total}`;
+textContent = `\$ ${total}`;
 
 document.getElementById("tip-percent").
 textContent = `${tipPercent}%`;
@@ -30,7 +31,7 @@ document.getElementById("split-num").textContent = noOfPeople;
 document.getElementById("tip-per-person").
 textContent =`\$ ${tipPerPerson}`;
 document.getElementById("total-per-person").
-textContent =`\$ ${total-per-person}`;
+textContent =`\$ ${total_per_person}`;
 
 }
 calculateTip();
